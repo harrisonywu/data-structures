@@ -22,17 +22,17 @@ var queueMethods = {
     if (this.storage[this.nextKeyRemove]) { //change the if case so that it selects the nextKeyRemove in storage.
       var dequeuedValue = this.storage[this.nextKeyRemove];
       delete this.storage[this.nextKeyRemove];
-	  }
-	  this.nextKeyRemove++;
-	  return dequeuedValue;
-	},
-	size: function() {
-		var keyCount = 0;
-		for (var key in this.storage) {
-	    	keyCount++;
-		 }
-		 return keyCount;
-	}
+    }
+    this.nextKeyRemove++;
+    return dequeuedValue;
+  },
+  size: function() {
+    var keyCount = 0;
+    for (var key in this.storage) {
+      keyCount++;
+    }
+    return keyCount;
+  }
 };
 
 

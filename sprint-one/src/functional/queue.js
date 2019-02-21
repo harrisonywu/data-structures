@@ -32,11 +32,12 @@ var Queue = function() {
     return dequeuedValue;
   };
   someInstance.size = function() {
-    var keyCount = 0;
-    for (var key in storage) {
-      keyCount++;
-    }
-    return keyCount;
+    // var keyCount = 0;
+    // for (var key in storage) {
+    //   keyCount++;
+    // }
+    // return keyCount;
+    return nextKeyInsert;
   };
   return someInstance;
 };
