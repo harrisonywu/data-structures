@@ -1,5 +1,5 @@
 var Stack = function() {
-  var someInstance = Object.create(stackMethods);
+  var someInstance = Object.create(stackMethods)
   someInstance.recentPushKey = 0;
   someInstance.storage = {};
   return someInstance;
