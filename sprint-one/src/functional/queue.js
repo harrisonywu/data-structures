@@ -24,12 +24,12 @@ var Queue = function() {
     // output: whatever value is in the first position of the queue (NOT THE KEY)
     //justify: when called, the function will remove the highest ranking item in storage, and then return that value. *** WHAT IS "ITEM" HERE, ONLY THE VALUE, OR THE KEY AS WELL'
   // explanation: you never need an input here, as you will first remove the top pair, then return only the value portion.
-  if (storage[nextKeyRemove]) { //change the if case so that it selects the nextKeyRemove in storage.
-    var dequeuedValue = storage[nextKeyRemove];
-    delete storage[nextKeyRemove];
-  };
-  nextKeyRemove++;
-  return dequeuedValue;
+    if (storage[nextKeyRemove]) { //change the if case so that it selects the nextKeyRemove in storage.
+      var dequeuedValue = storage[nextKeyRemove];
+      delete storage[nextKeyRemove];
+    }
+    nextKeyRemove++;
+    return dequeuedValue;
   };
   someInstance.size = function() {
     var keyCount = 0;
