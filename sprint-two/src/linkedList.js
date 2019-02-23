@@ -21,9 +21,9 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    if (/*list.head is null*/){
+    if (list.head === null) {
       return null;
-    } else if (/* list.head is equal to list.tail AKA only one in list*/) {
+    } else if (list.head === list.tail) {
       //then have both list.head and list.tail point to null;
       var returnValue = list.head.value;
       list.head = null;
@@ -31,7 +31,7 @@ var LinkedList = function() {
       return returnValue;
 
       
-    } else if (/* if list.head and list.tail not null and not the same*/) {
+    } else if (list.head !== null) {
       // declare a var to identify the node value we are removing
       // declare a var to identify item head points to
       // have head point to that item
@@ -49,7 +49,7 @@ var LinkedList = function() {
     // if the value of both of them is a same so return true and is nat same go to 
     // find next node to compare with target until the value of tail is null
     var doesContain = false;
-    var nodeCheck = list.head.value; // remember where the current node is in the linked list
+    // var nodeCheck = list.head.value; // remember where the current node is in the linked list
     // check if value at nodeCheck = target
     var newFunc = function (node) {
       if (node.value === target) {
